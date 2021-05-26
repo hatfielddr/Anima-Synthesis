@@ -44,13 +44,17 @@
     <None Include="..\Patches\**" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AnimaSprout\AnimaSprout.cs" />
+    <Compile Include="AnimaSprout\JobDriver_TendToAnimaSprout.cs" />
+    <Compile Include="AnimaSprout\WorkGiver_TendToAnimaSprout.cs" />
     <Compile Include="AnimaSynthesis.cs" />
     <Compile Include="AS_DefOf.cs" />
-    <Compile Include="Patch_MeditateJob.cs" />
     <Compile Include="HarmonyPatcher.cs" />
+    <Compile Include="Patch_MeditateJob.cs" />
     <Compile Include="Patch_AnimaGen.cs" />
     <Compile Include="Patch_AnimaRespawn.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

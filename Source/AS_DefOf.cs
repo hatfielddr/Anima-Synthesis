@@ -9,5 +9,6 @@ namespace AnimaSynthesis
     {
         [MayRequireRoyalty]
         public static ThingDef Plant_TreeAnimaSprout;
+        public static JobDef AnimaSynthesis_TendToAnimaSprout;
     }
 }

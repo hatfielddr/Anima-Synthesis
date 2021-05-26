@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <WorkGiverDef>
+    <defName>AnimaSynthesis_TendToTheAnimaSprout</defName>
+    <label>tend to the anima sprout</label>
+    <giverClass>AnimaSynthesis.WorkGiver_TendToAnimaSprout</giverClass>
+    <workType>Growing</workType>
+    <verb>tend anima sprout</verb>
+    <gerund>tend to</gerund>
+    <priorityInType>20</priorityInType>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+  </WorkGiverDef>
+  
+</Defs> 

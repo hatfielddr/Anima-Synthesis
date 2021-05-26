@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+  <ANeedTend>The apiary needs to be tended to.</ANeedTend>
+  <ANeedTIn>The apiary needs tending in {0}.</ANeedTIn>
+</LanguageData>

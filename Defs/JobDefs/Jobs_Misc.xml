@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <JobDef>
+    <defName>AnimaSynthesis_TendToAnimaSprout</defName>
+    <driverClass>AnimaSynthesis.JobDriver_TendToAnimaSprout</driverClass>
+    <reportString>tending to TargetA.</reportString>
+    <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+  </JobDef>
+  
+</Defs>
