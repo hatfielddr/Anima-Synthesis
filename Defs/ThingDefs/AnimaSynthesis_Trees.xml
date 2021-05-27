@@ -3,7 +3,7 @@
   
   <ThingDef ParentName="TreeBase" Name="TreeAnima_Sprout">
     <defName>Plant_TreeAnimaSprout</defName>
-    <thingClass>AnimaSynthesis.AnimaSprout</thingClass>
+    <thingClass>AnimaSynthesis.AS_Plant</thingClass>
     <tickerType>Rare</tickerType>
     <label>anima sprout</label>
     <description>A rare tree with warm, skin-smooth bark and long iridescent leaves. Infused with bioluminescent micro-organisms, anima trees develop a unique form of psychic symbiosis with surrounding lifeforms, allowing them to grow in a wide variety of biomes.\n\nIf a person (psycaster or not) meditates near an anima tree, it will grow anima grass around its base. Once enough grass is grown, it becomes possible to carry out a psychic linking ritual with the tree and upgrade a person's psychic powers. Only tribal peoples know the secret of this ritual. Tribal psycasters are also able to draw psyfocus from anima trees while meditating to them.\n\nAnima trees' psychic properties are weakened if artificial structures are placed nearby. They refuse to be caged or studied, and must remain part of nature.\n\nMost tribes believe that anima trees are not simply trees, but are rather the physical extremities of a single world spirit.</description>
@@ -66,28 +66,10 @@
             <explanationKeyAbstract>MeditationFocusPerAnimusStoneAndShrineAbstract</explanationKeyAbstract>
           </li>
         </offsets>
-      </li>
+      </li>      
       <li Class="CompProperties_Glower">
         <glowRadius>3.75</glowRadius>
         <glowColor>(110,116,125,0)</glowColor>
-      </li>
-      <li Class="CompProperties_SpawnSubplant">
-        <subplant>Plant_GrassAnima</subplant>
-        <spawnSound>AnimaTreeProgress</spawnSound>
-      </li>
-      <li Class="CompProperties_Psylinkable">
-        <requiredSubplantCountPerPsylinkLevel>
-          <li>20</li>
-          <li>20</li>
-          <li>20</li>
-          <li>20</li>
-          <li>20</li>
-          <li>20</li>
-        </requiredSubplantCountPerPsylinkLevel>
-        <requiredFocus>Natural</requiredFocus>
-        <linkSound>AnimaTreeLink</linkSound>
-        <enoughPlantsLetterLabel>About: Anima tree linking</enoughPlantsLetterLabel>
-        <enoughPlantsLetterText>The anima tree now has {0} anima grass around it. This is enough for a tribal person to begin their first linking ritual!\n\nThe linking ritual gives a level of psylink and the ability to use psychic powers. Upgrading to a higher level requires more grass at each level.\n\nThe anima grass requirements for linking rituals to upgrade psycasters are:\n\n{1}\n\nNote: Only those with the nature focus type can meditate to or link with anima trees. You can see a person's focus types by looking at their info card with the ‘i' button.</enoughPlantsLetterText>
       </li>
       <li Class="CompProperties_GiveThoughtToAllMapPawnsOnDestroy">
         <thought>AnimaScream</thought>
