@@ -66,7 +66,10 @@
             <explanationKeyAbstract>MeditationFocusPerAnimusStoneAndShrineAbstract</explanationKeyAbstract>
           </li>
         </offsets>
-      </li>      
+      </li>
+      <li Class="AnimaSynthesis.CompProperties_GrowthCooldown">
+        <ticksBeforeCooldown>30000</ticksBeforeCooldown>
+      </li>
       <li Class="CompProperties_Glower">
         <glowRadius>3.75</glowRadius>
         <glowColor>(110,116,125,0)</glowColor>

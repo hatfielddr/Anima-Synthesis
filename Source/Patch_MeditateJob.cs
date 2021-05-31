@@ -5,6 +5,7 @@ using System.Linq;
 using System.Reflection;
 using System.Collections.Generic;
 using System.Reflection.Emit;
+using System;
 
 namespace AnimaSynthesis
 {
@@ -21,7 +22,10 @@ namespace AnimaSynthesis
         static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions, ILGenerator generator)
         {
             var code = instructions.ToList();
-            var labelAnimaSynthesis = generator.DefineLabel();
+            var labelAnimaSprout = generator.DefineLabel();
+            var skipSubplant = generator.DefineLabel();
+            var labelCheckNull = generator.DefineLabel();
+            var local7 = generator.DeclareLocal(typeof(AS_Plant));
             for (int i = 0; i < code.Count; i++)
             {
 
@@ -30,15 +34,41 @@ namespace AnimaSynthesis
                 if (i + 1 < code.Count && code[i+1].opcode == OpCodes.Bne_Un_S)
                 {
                     Log.Message("triggered");
-                    code[i + 2].labels.Add(labelAnimaSynthesis);
+                    code[i + 2].labels.Add(labelAnimaSprout);
                     // if anima tree, jump
-                    yield return new CodeInstruction(OpCodes.Beq_S, labelAnimaSynthesis);
+                    yield return new CodeInstruction(OpCodes.Beq_S, labelAnimaSprout);
                     // load plant
                     yield return new CodeInstruction(OpCodes.Ldloc_S, 5);
                     // and its def
                     yield return new CodeInstruction(OpCodes.Ldfld, typeof(Verse.Thing).GetField("def"));
-                    //load the anima sprout def
+                    // load the anima sprout def
                     yield return new CodeInstruction(OpCodes.Ldsfld, typeof(AS_DefOf).GetField("Plant_TreeAnimaSprout"));
+
+                    // return until we get to the next change
+                    yield return code[++i];
+                    yield return code[++i];
+                    yield return code[++i];
+                    yield return code[++i];
+                    yield return code[++i];
+
+                    // overwrite the jump label for the subplant 
+                    yield return new CodeInstruction(OpCodes.Brfalse_S, skipSubplant);
+                    i++;
+                    yield return code[++i];
+                    yield return code[++i];
+                    yield return code[++i];
+                    yield return code[++i];
+
+                    code[i + 1].labels.Add(labelCheckNull);
+                    var ins = new CodeInstruction(OpCodes.Ldloc_S, 5);
+                    ins.labels.Add(skipSubplant);
+                    yield return ins;
+                    yield return new CodeInstruction(OpCodes.Call, (MethodInfo)typeof(ThingCompUtility).GetMethods(AccessTools.all).FirstOrDefault(m => m.Name == "TryGetComp").MakeGenericMethod(typeof(CompGrowthCooldown)));
+                    yield return new CodeInstruction(OpCodes.Stloc_S, local7);
+                    yield return new CodeInstruction(OpCodes.Ldloc_S, local7);
+                    yield return new CodeInstruction(OpCodes.Brfalse_S, labelCheckNull);
+                    yield return new CodeInstruction(OpCodes.Ldloc_S, local7);
+                    yield return new CodeInstruction(OpCodes.Callvirt, typeof(CompGrowthCooldown).GetMethod("ResetCooldown"));
                 }
             }
         }

@@ -11,6 +11,7 @@ namespace AnimaSynthesis
             {
                 float growthOffset;
                 float focusOffset = this.TryGetComp<CompMeditationFocus>().GetStatOffset();
+                float meditationCooldown = this.TryGetComp<CompGrowthCooldown>().GetMeditationCooldown();
                 
                 if (focusOffset == 0)
                 {
@@ -21,7 +22,7 @@ namespace AnimaSynthesis
                     growthOffset = 0;
                 }
 
-                return base.GrowthRate * growthOffset;
+                return base.GrowthRate * growthOffset * (float)(meditationCooldown / 60000);
             }
         }
     }

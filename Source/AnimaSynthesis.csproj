@@ -50,6 +50,8 @@
     <Compile Include="AnimaSprout\WorkGiver_TendToAnimaSprout.cs" />
     <Compile Include="AnimaSynthesis.cs" />
     <Compile Include="AS_DefOf.cs" />
+    <Compile Include="Comp\CompGrowthCooldown.cs" />
+    <Compile Include="Comp\CompProperties_GrowthCooldown.cs" />
     <Compile Include="HarmonyPatcher.cs" />
     <Compile Include="Patch_AnimaGen.cs" />
     <Compile Include="Patch_AnimaRespawn.cs" />
