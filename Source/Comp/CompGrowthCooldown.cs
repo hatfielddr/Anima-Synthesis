@@ -6,19 +6,22 @@ namespace AnimaSynthesis
     public class CompGrowthCooldown : ThingComp
     {
         public CompProperties_GrowthCooldown Props => (CompProperties_GrowthCooldown)this.props;
+        float meditationCooldown = 0;
 
-        float meditationCooldown = 30000;
-
-        public override void CompTickRare()
+        public override void CompTickLong()
         {
-            base.CompTickRare();
-            meditationCooldown = meditationCooldown-250 > 0 ? (meditationCooldown - 250) : 0;
+            base.CompTickLong();
+            meditationCooldown = meditationCooldown-2000 > 0 ? (meditationCooldown - 2000) : 0;
         }
 
         public void ResetCooldown()
         {
-            Log.Message("Should Reset");
             meditationCooldown = Props.ticksBeforeCooldown;
+        }
+
+        public void WarmUp()
+        {
+            meditationCooldown = meditationCooldown + 4 < Props.ticksBeforeCooldown ? (meditationCooldown + 4) : Props.ticksBeforeCooldown;
         }
 
         public float GetMeditationCooldown()

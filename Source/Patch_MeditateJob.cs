@@ -68,7 +68,7 @@ namespace AnimaSynthesis
                     yield return new CodeInstruction(OpCodes.Ldloc_S, local7);
                     yield return new CodeInstruction(OpCodes.Brfalse_S, labelCheckNull);
                     yield return new CodeInstruction(OpCodes.Ldloc_S, local7);
-                    yield return new CodeInstruction(OpCodes.Callvirt, typeof(CompGrowthCooldown).GetMethod("ResetCooldown"));
+                    yield return new CodeInstruction(OpCodes.Callvirt, typeof(CompGrowthCooldown).GetMethod("WarmUp"));
                 }
             }
         }
