@@ -10,17 +10,17 @@ namespace AnimaSynthesis
             get
             {
                 float growthOffset;
-                float focusOffset = this.TryGetComp<CompMeditationFocus>().GetStatOffset();
+                bool techOffset = this.TryGetComp<CompAdvancedBuildings>().CheckBuildings();
                 float meditationCooldown = this.TryGetComp<CompGrowthCooldown>().GetMeditationCooldown();
                 CompProperties_GrowthCooldown myProps = (CompProperties_GrowthCooldown)this.GetComp<CompGrowthCooldown>().props;
 
-                if (focusOffset == 0)
+                if (techOffset)
                 {
-                    growthOffset = 1;
+                    growthOffset = 0;
                 }
                 else
                 {
-                    growthOffset = 0;
+                    growthOffset = 1;
                 }
 
                 return base.GrowthRate * growthOffset * (float)(meditationCooldown / (myProps.ticksBeforeCooldown / 2));

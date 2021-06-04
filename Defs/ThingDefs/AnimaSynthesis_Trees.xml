@@ -69,6 +69,9 @@
       <li Class="AnimaSynthesis.CompProperties_GrowthCooldown">
         <ticksBeforeCooldown>60000</ticksBeforeCooldown>
       </li>
+      <li Class="AnimaSynthesis.CompProperties_AdvancedBuildings">
+        <radius>34.9</radius>
+      </li>
       <li Class="CompProperties_Glower">
         <glowRadius>3.75</glowRadius>
         <glowColor>(110,116,125,0)</glowColor>

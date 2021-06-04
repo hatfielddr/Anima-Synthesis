@@ -6,7 +6,7 @@ namespace AnimaSynthesis
     public class CompGrowthCooldown : ThingComp
     {
         public CompProperties_GrowthCooldown Props => (CompProperties_GrowthCooldown)this.props;
-        float meditationCooldown = 0;
+        float meditationCooldown = 60000;
 
         public override void CompTickLong()
         {
