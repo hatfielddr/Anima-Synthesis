@@ -50,9 +50,10 @@ namespace AnimaSynthesis
 			{
 				if (def.researchPrerequisites.CountAllowNull() > 0)
 				{
+					Thing thing = ThingMaker.MakeThing(AS_DefOf.Plant_TreeAnimaSprout);
 					foreach (ResearchProjectDef r in def.researchPrerequisites)
 					{
-						return r.techLevel >= TechLevel.Industrial;
+						return r.techLevel >= thing.TryGetComp<CompAdvancedBuildings>().Props.techLevel;
 					}
 				}
 				return false;

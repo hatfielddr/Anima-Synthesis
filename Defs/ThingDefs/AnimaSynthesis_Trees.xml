@@ -71,6 +71,7 @@
       </li>
       <li Class="AnimaSynthesis.CompProperties_AdvancedBuildings">
         <radius>34.9</radius>
+        <techLevel>Industrial</techLevel>
       </li>
       <li Class="CompProperties_Glower">
         <glowRadius>3.75</glowRadius>
