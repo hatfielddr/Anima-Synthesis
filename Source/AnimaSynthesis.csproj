@@ -59,6 +59,7 @@
     <Compile Include="Patches\Patch_AnimaGen.cs" />
     <Compile Include="Patches\Patch_AnimaRespawn.cs" />
     <Compile Include="Patches\Patch_MeditateJob.cs" />
+    <Compile Include="Patches\Patch_NotifyBuildingDeSpawned.cs" />
     <Compile Include="Patches\Patch_NotifyBuildingSpawned.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

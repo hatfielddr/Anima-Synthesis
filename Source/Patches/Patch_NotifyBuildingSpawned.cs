@@ -9,7 +9,7 @@ namespace AnimaSynthesis
     {
         static void Postfix(ref Building __instance)
         {
-            __instance.Map.GetComponent<CheckBuildings>().Notify_BuildingChange(__instance);
+            __instance.Map.GetComponent<CheckBuildings>().Notify_BuildingChange();
         }
     }
 }

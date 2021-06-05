@@ -7,21 +7,32 @@ namespace AnimaSynthesis
     class CheckBuildings : MapComponent
     {
 		public CheckBuildings(Map m) : base(m) { }
+		public bool dirty;
 
-		public void Notify_BuildingChange(Building b)
+		public void Notify_BuildingChange()
 		{
-			var plant = ThingMaker.MakeThing(AS_DefOf.Plant_TreeAnimaSprout);
+            /*var plant = ThingMaker.MakeThing(AS_DefOf.Plant_TreeAnimaSprout);
             if (CheckBuildings.CountsAsTechBuilding(b))
             {
                 foreach (Thing thing in GenRadial.RadialDistinctThingsAround(b.Position, this.map, plant.TryGetComp<CompAdvancedBuildings>().Props.radius, false))
-				{
-					if (thing.GetType().Equals(typeof(AS_Plant)))
-					{
-						this.techBuildingsPerCell.Clear();
-						thing.TryGetComp<CompAdvancedBuildings>().RegenCache();
-					}
-				}
+                {
+                    if (thing.GetType().Equals(typeof(AS_Plant)))
+                    {
+                        this.techBuildingsPerCell.Clear();
+                        thing.TryGetComp<CompAdvancedBuildings>().RegenCache();
+                    }
+                }
+            }*/
+            dirty = true;
+        }
+
+		public List<Thing> RegenCache(List<Thing> list, IntVec3 cell, float radius)
+        {
+			if (dirty)
+            {
+				return GetForCell(cell, radius);
             }
+			return list;
         }
 
 		public List<Thing> GetForCell(IntVec3 cell, float radius)

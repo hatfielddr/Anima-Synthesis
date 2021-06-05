@@ -11,6 +11,8 @@ namespace AnimaSynthesis
 
         public bool CheckBuildings()
         {
+            buildings = this.parent.Map.GetComponent<CheckBuildings>().RegenCache(buildings, this.parent.Position, Props.radius);
+            //trying something new
             if (buildings.Count != 0)
                 return true;
             return false;
