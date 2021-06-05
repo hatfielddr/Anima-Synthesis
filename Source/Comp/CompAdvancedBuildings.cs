@@ -11,16 +11,12 @@ namespace AnimaSynthesis
 
         public bool CheckBuildings()
         {
+            //trying something new - Caching the buildings
             buildings = this.parent.Map.GetComponent<CheckBuildings>().RegenCache(buildings, this.parent.Position, Props.radius);
-            //trying something new
-            if (buildings.Count != 0)
+
+            if (buildings != null && buildings.Count != 0)
                 return true;
             return false;
-        }
-
-        public void RegenCache()
-        {
-            buildings = this.parent.Map.GetComponent<CheckBuildings>().GetForCell(this.parent.Position, Props.radius);
         }
     }
 }
