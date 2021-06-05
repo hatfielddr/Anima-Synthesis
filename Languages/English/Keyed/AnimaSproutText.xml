@@ -4,4 +4,5 @@
   <ANeedTIn>The apiary needs tending in {0}.</ANeedTIn>
   <GrowthRateImpacted>Progress rate impacted by</GrowthRateImpacted>
   <GrowthImpacted>Growth rate impacted by</GrowthImpacted>
+  <MeditationNeed>The {0} needs to be meditated at to continue progression.</MeditationNeed>
 </LanguageData>

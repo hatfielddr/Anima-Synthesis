@@ -10,6 +10,7 @@ using System;
 namespace AnimaSynthesis
 {
     [HarmonyPatch]
+    [HarmonyDebug]
     internal class Patch_MeditateJob
     {
         static MethodBase TargetMethod()
@@ -22,7 +23,7 @@ namespace AnimaSynthesis
         static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions, ILGenerator generator)
         {
             var code = instructions.ToList();
-            var labelAnimaSprout = generator.DefineLabel();
+            var exteriorConditionalFalse = generator.DefineLabel();
             var skipSubplant = generator.DefineLabel();
             var labelCheckNull = generator.DefineLabel();
             var local7 = generator.DeclareLocal(typeof(AS_Plant));
@@ -31,21 +32,23 @@ namespace AnimaSynthesis
 
                 yield return code[i];
 
-                if (i + 1 < code.Count && code[i+1].opcode == OpCodes.Bne_Un_S)
+                if (i + 3 < code.Count && code[i+3].opcode == OpCodes.Bne_Un_S)
                 {
-                    Log.Message("triggered");
-                    code[i + 2].labels.Add(labelAnimaSprout);
+                    //code[i + 2].labels.Add(labelAnimaTree);
                     // if anima tree, jump
-                    yield return new CodeInstruction(OpCodes.Beq_S, labelAnimaSprout);
+                    //yield return new CodeInstruction(OpCodes.Beq_S, labelAnimaTree);
                     // load plant
-                    yield return new CodeInstruction(OpCodes.Ldloc_S, 5);
-                    // and its def
-                    yield return new CodeInstruction(OpCodes.Ldfld, typeof(Verse.Thing).GetField("def"));
+                    //yield return new CodeInstruction(OpCodes.Ldloc_S, 5);
+
+                    yield return new CodeInstruction(OpCodes.Isinst, typeof(AS_Plant));
+                    
+                    yield return new CodeInstruction(OpCodes.Brfalse_S, exteriorConditionalFalse);
+                    i += 3;
+                    code[i + 10].labels.Add(exteriorConditionalFalse);
                     // load the anima sprout def
-                    yield return new CodeInstruction(OpCodes.Ldsfld, typeof(AS_DefOf).GetField("Plant_TreeAnimaSprout"));
+                    //yield return new CodeInstruction(OpCodes.Ldsfld, typeof(AS_DefOf).GetField("Plant_TreeAnimaSprout"));
 
                     // return until we get to the next change
-                    yield return code[++i];
                     yield return code[++i];
                     yield return code[++i];
                     yield return code[++i];
@@ -54,6 +57,8 @@ namespace AnimaSynthesis
                     // overwrite the jump label for the subplant 
                     yield return new CodeInstruction(OpCodes.Brfalse_S, skipSubplant);
                     i++;
+
+                    // return until we get to the next change
                     yield return code[++i];
                     yield return code[++i];
                     yield return code[++i];

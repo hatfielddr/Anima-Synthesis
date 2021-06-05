@@ -9,7 +9,6 @@ namespace AnimaSynthesis
     {
         static HarmonyPatcher()
         {
-            Harmony.DEBUG = true;
             Harmony val = new Harmony("rimworld.animasynthesis");
             val.PatchAll();
         }
