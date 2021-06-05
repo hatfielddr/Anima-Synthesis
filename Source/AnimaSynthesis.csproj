@@ -56,9 +56,10 @@
     <Compile Include="Comp\CompProperties_AdvancedBuildings.cs" />
     <Compile Include="Comp\CompProperties_GrowthCooldown.cs" />
     <Compile Include="HarmonyPatcher.cs" />
-    <Compile Include="Patch_AnimaGen.cs" />
-    <Compile Include="Patch_AnimaRespawn.cs" />
-    <Compile Include="Patch_MeditateJob.cs" />
+    <Compile Include="Patches\Patch_AnimaGen.cs" />
+    <Compile Include="Patches\Patch_AnimaRespawn.cs" />
+    <Compile Include="Patches\Patch_MeditateJob.cs" />
+    <Compile Include="Patches\Patch_NotifyBuildingSpawned.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
