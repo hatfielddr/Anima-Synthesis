@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
-  <ANeedTend>The apiary needs to be tended to.</ANeedTend>
-  <ANeedTIn>The apiary needs tending in {0}.</ANeedTIn>
-  <GrowthRateImpacted>Progress rate impacted by</GrowthRateImpacted>
   <GrowthImpacted>Growth rate impacted by</GrowthImpacted>
   <MeditationNeed>The {0} needs to be meditated at to continue progression.</MeditationNeed>
+  <NeedsTending>The {0} needs to be tended to.</NeedsTending>
+  <NeedsTendIn>The {0} needs to be tended in {1}.</NeedsTendIn>
 </LanguageData>

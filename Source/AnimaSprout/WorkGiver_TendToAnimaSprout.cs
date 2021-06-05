@@ -24,7 +24,7 @@ namespace AnimaSynthesis
 
         public override bool HasJobOnThing(Pawn pawn, Thing t, bool forced = false)
         {
-            AnimaSprout tNR_AnimaSprout = t as AnimaSprout;
+            AS_Plant tNR_AnimaSprout = t as AS_Plant;
             if (tNR_AnimaSprout == null || !tNR_AnimaSprout.needTend)
             {
                 return false;

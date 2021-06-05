@@ -10,7 +10,6 @@ using System;
 namespace AnimaSynthesis
 {
     [HarmonyPatch]
-    [HarmonyDebug]
     internal class Patch_MeditateJob
     {
         static MethodBase TargetMethod()
