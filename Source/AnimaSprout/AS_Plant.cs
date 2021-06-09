@@ -84,6 +84,7 @@ namespace AnimaSynthesis
 
         public override IEnumerable<Gizmo> GetGizmos()
         {
+            CompProperties_AscendDescend Props = (CompProperties_AscendDescend)this.GetComp<CompAscendDescend>().props;
             foreach (Gizmo g in base.GetGizmos())
             {
                 yield return g;
@@ -96,6 +97,22 @@ namespace AnimaSynthesis
                     action = delegate ()
                     {
                         this.tickBeforeTend = 120000;
+                    }
+                };
+                yield return new Command_Action
+                {
+                    defaultLabel = "Debug: Ascend plant",
+                    action = delegate ()
+                    {
+                        this.Map.GetComponent<AscendDescend>().Swap(this, Props.higherRank);
+                    }
+                };
+                yield return new Command_Action
+                {
+                    defaultLabel = "Debug: Descend plant",
+                    action = delegate ()
+                    {
+                        this.Map.GetComponent<AscendDescend>().Swap(this, Props.lowerRank);
                     }
                 };
                 yield return new Command_Action

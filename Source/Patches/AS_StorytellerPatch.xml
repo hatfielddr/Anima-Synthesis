@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+    <Operation Class="PatchOperationAdd">
+        <!-- <success>Always</success> -->
+        <xpath>/Defs/StorytellerDef[@Name = "BaseStoryteller"]/comps</xpath>
+        <value>
+            <li Class="StorytellerCompProperties_SingleOnceFixed">
+                <fireAfterDaysPassed>4</fireAfterDaysPassed>
+                <incident MayRequire="Ludeon.RimWorld.Royalty">AS_GiveQuest_Intro_Wimp</incident>
+                <allowedTargetTags>
+                    <li>World</li>
+                </allowedTargetTags>
+                <enableIfAnyModActive>
+                    <li>Ludeon.RimWorld.Royalty</li>
+                </enableIfAnyModActive>
+            </li>
+        </value>
+    </Operation>
+</Patch>

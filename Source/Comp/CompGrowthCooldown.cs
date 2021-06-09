@@ -8,6 +8,12 @@ namespace AnimaSynthesis
         public CompProperties_GrowthCooldown Props => (CompProperties_GrowthCooldown)this.props;
         float meditationCooldown = 0;
 
+        public override void PostExposeData()
+        {
+            base.PostExposeData();
+            Scribe_Values.Look<float>(ref this.meditationCooldown, "meditationCooldown", 0, false);
+        }
+
         public override void CompTickLong()
         {
             base.CompTickLong();

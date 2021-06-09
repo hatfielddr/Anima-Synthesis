@@ -44,18 +44,22 @@
     <None Include="..\Patches\**" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AnimaSprout\AnimaSprout.cs" />
     <Compile Include="AnimaSprout\AS_Plant.cs" />
     <Compile Include="AnimaSprout\JobDriver_TendToAnimaSprout.cs" />
     <Compile Include="AnimaSprout\WorkGiver_TendToAnimaSprout.cs" />
     <Compile Include="AnimaSynthesis.cs" />
+    <Compile Include="ASUtility.cs" />
     <Compile Include="AS_DefOf.cs" />
+    <Compile Include="Comp\AscendDescend.cs" />
     <Compile Include="Comp\CheckBuildings.cs" />
     <Compile Include="Comp\CompAdvancedBuildings.cs" />
+    <Compile Include="Comp\CompAscendDescend.cs" />
     <Compile Include="Comp\CompGrowthCooldown.cs" />
     <Compile Include="Comp\CompProperties_AdvancedBuildings.cs" />
+    <Compile Include="Comp\CompProperties_AscendDescend.cs" />
     <Compile Include="Comp\CompProperties_GrowthCooldown.cs" />
     <Compile Include="HarmonyPatcher.cs" />
+    <Content Include="Patches\AS_StorytellerPatch.xml" />
     <Compile Include="Patches\Patch_AnimaGen.cs" />
     <Compile Include="Patches\Patch_AnimaRespawn.cs" />
     <Compile Include="Patches\Patch_MeditateJob.cs" />
@@ -63,6 +67,8 @@
     <Compile Include="Patches\Patch_NotifyBuildingSpawned.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Incident\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
