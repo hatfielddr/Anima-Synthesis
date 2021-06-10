@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  
+
+  <!--=========================== Anima Sprout ===========================-->
   <ThingDef ParentName="TreeBase" Name="TreeAnima_Sprout">
     <defName>Plant_TreeAnimaSprout</defName>
     <thingClass>AnimaSynthesis.AS_Plant</thingClass>
@@ -94,6 +95,7 @@
     </comps>
   </ThingDef>
 
+  <!--=========================== Elder Anima Tree ===========================-->
   <ThingDef ParentName="TreeBase" Name="TreeAnima_Elder">
     <defName>Plant_TreeAnimaElder</defName>
     <thingClass>AnimaSynthesis.AS_Plant</thingClass>
@@ -107,6 +109,7 @@
         <offset>(0,0,-0.25)</offset>
       </shadowData>
     </graphicData>
+    <altitudeLayer>BuildingOnTop</altitudeLayer>
     <drawGUIOverlay>True</drawGUIOverlay>
     <statBases>
       <Beauty>5</Beauty>
@@ -118,7 +121,7 @@
     <preventSkyfallersLandingOn>true</preventSkyfallersLandingOn>
     <plant>
       <growDays>25</growDays>
-      <visualSizeRange>1.8~2.5</visualSizeRange>
+      <visualSizeRange>3.0~5.0</visualSizeRange>
       <sowMinSkill>0</sowMinSkill>
       <sowTags Inherit="False"/>
       <dieIfNoSunlight>False</dieIfNoSunlight>
