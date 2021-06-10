@@ -2,12 +2,25 @@
 <Defs>
 
   <WorkGiverDef>
-    <defName>AnimaSynthesis_TendToTheAnimaSprout</defName>
-    <label>tend to the anima sprout</label>
-    <giverClass>AnimaSynthesis.WorkGiver_TendToAnimaSprout</giverClass>
+    <defName>AnimaSynthesis_TendToTheAnimaPlant</defName>
+    <label>tend to the anima plant</label>
+    <giverClass>AnimaSynthesis.WorkGiver_TendToAnimaPlant</giverClass>
     <workType>Growing</workType>
-    <verb>tend anima sprout</verb>
-    <gerund>tend to</gerund>
+    <verb>tend anima plant</verb>
+    <gerund>tending to</gerund>
+    <priorityInType>20</priorityInType>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+  </WorkGiverDef>
+
+  <WorkGiverDef>
+    <defName>AnimaSynthesis_AscendPlant</defName>
+    <label>ascend the anima plant</label>
+    <giverClass>AnimaSynthesis.WorkGiver_AscendPlant</giverClass>
+    <workType>Growing</workType>
+    <verb>ascend anima plant</verb>
+    <gerund>ascending</gerund>
     <priorityInType>20</priorityInType>
     <requiredCapacities>
       <li>Manipulation</li>

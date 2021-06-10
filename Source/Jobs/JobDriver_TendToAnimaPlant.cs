@@ -5,7 +5,7 @@ using Verse.AI;
 
 namespace AnimaSynthesis
 {
-    class JobDriver_TendToAnimaSprout : JobDriver
+    class JobDriver_TendToAnimaPlant : JobDriver
     {
 
         protected AS_Plant AS_Plant
@@ -42,7 +42,7 @@ namespace AnimaSynthesis
                     else
                     {
                         MoteMaker.ThrowText(pawn.DrawPos, pawn.Map, "Tending failed", 5f);
-                        pawn.jobs.StartJob(new Job(AS_DefOf.AnimaSynthesis_TendToAnimaSprout, TargetA));
+                        pawn.jobs.StartJob(new Job(AS_DefOf.AnimaSynthesis_TendToAnimaPlant, TargetA));
                     }
                     pawn.skills.skills.Find((SkillRecord r) => r.def.defName == "Plants").Learn(20, false);
                 },

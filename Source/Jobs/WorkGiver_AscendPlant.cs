@@ -4,13 +4,14 @@ using Verse.AI;
 
 namespace AnimaSynthesis
 {
-    class WorkGiver_TendToAnimaSprout : WorkGiver_Scanner
+    class WorkGiver_AscendPlant : WorkGiver_Scanner
     {
+
         public override ThingRequest PotentialWorkThingRequest
         {
             get
             {
-                return ThingRequest.ForDef(AS_DefOf.Plant_TreeAnimaSprout);
+                return ThingRequest.ForGroup(ThingRequestGroup.Plant);
             }
         }
 
@@ -25,7 +26,7 @@ namespace AnimaSynthesis
         public override bool HasJobOnThing(Pawn pawn, Thing t, bool forced = false)
         {
             AS_Plant tNR_AnimaSprout = t as AS_Plant;
-            if (tNR_AnimaSprout == null || !tNR_AnimaSprout.needTend)
+            if (tNR_AnimaSprout == null || tNR_AnimaSprout.LifeStage != PlantLifeStage.Mature)
             {
                 return false;
             }
@@ -46,7 +47,12 @@ namespace AnimaSynthesis
 
         public override Job JobOnThing(Pawn pawn, Thing t, bool forced = false)
         {
-            return new Job(AS_DefOf.AnimaSynthesis_TendToAnimaSprout, t);
+            if (pawn.skills != null && pawn.skills.GetSkill(SkillDefOf.Plants).Level < 12)
+            {
+                JobFailReason.Is("UnderAllowedSkill".Translate(12), this.def.label);
+                return null;
+            }
+            return new Job(AS_DefOf.AnimaSynthesis_AscendPlant, t);
         }
     }
 }

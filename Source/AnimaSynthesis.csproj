@@ -40,16 +40,23 @@
       <Private>False</Private>
     </Reference>
     <None Include="..\About\About.xml" />
-    <None Include="..\Defs\**" />
+    <None Include="..\Defs\FactionDefs\AS_Factions.xml" />
+    <None Include="..\Defs\IncidentDefs\AS_Incidents_World_Quests.xml" />
+    <None Include="..\Defs\JobDefs\Jobs_Misc.xml" />
+    <None Include="..\Defs\PawnKindsDefs\PawnKinds_Animus.xml" />
+    <None Include="..\Defs\QuestScriptDefs\AS_Script_Intro_Wimp.xml" />
+    <None Include="..\Defs\ThingDefs\AnimaSynthesis_Trees.xml" />
+    <None Include="..\Defs\WorkGiverDefs\WorkGivers.xml" />
     <None Include="..\Patches\**" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AnimaSprout\AS_Plant.cs" />
-    <Compile Include="AnimaSprout\JobDriver_TendToAnimaSprout.cs" />
-    <Compile Include="AnimaSprout\WorkGiver_TendToAnimaSprout.cs" />
-    <Compile Include="AnimaSynthesis.cs" />
-    <Compile Include="ASUtility.cs" />
-    <Compile Include="AS_DefOf.cs" />
+    <Compile Include="AnimaSynthesis\AS_Plant.cs" />
+    <Compile Include="Jobs\JobDriver_AscendPlant.cs" />
+    <Compile Include="Jobs\JobDriver_TendToAnimaPlant.cs" />
+    <Compile Include="Jobs\WorkGiver_AscendPlant.cs" />
+    <Compile Include="Jobs\WorkGiver_TendToAnimaPlant.cs" />
+    <Compile Include="AnimaSynthesis\ASUtility.cs" />
+    <Compile Include="AnimaSynthesis\AS_DefOf.cs" />
     <Compile Include="Comp\AscendDescend.cs" />
     <Compile Include="Comp\CheckBuildings.cs" />
     <Compile Include="Comp\CompAdvancedBuildings.cs" />
@@ -58,7 +65,7 @@
     <Compile Include="Comp\CompProperties_AdvancedBuildings.cs" />
     <Compile Include="Comp\CompProperties_AscendDescend.cs" />
     <Compile Include="Comp\CompProperties_GrowthCooldown.cs" />
-    <Compile Include="HarmonyPatcher.cs" />
+    <Compile Include="AnimaSynthesis\HarmonyPatcher.cs" />
     <Content Include="Patches\AS_StorytellerPatch.xml" />
     <Compile Include="Patches\Patch_AnimaGen.cs" />
     <Compile Include="Patches\Patch_AnimaRespawn.cs" />

@@ -2,9 +2,16 @@
 <Defs>
 
   <JobDef>
-    <defName>AnimaSynthesis_TendToAnimaSprout</defName>
-    <driverClass>AnimaSynthesis.JobDriver_TendToAnimaSprout</driverClass>
+    <defName>AnimaSynthesis_TendToAnimaPlant</defName>
+    <driverClass>AnimaSynthesis.JobDriver_TendToAnimaPlant</driverClass>
     <reportString>tending to TargetA.</reportString>
+    <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+  </JobDef>
+
+  <JobDef>
+    <defName>AnimaSynthesis_AscendPlant</defName>
+    <driverClass>AnimaSynthesis.JobDriver_AscendPlant</driverClass>
+    <reportString>ascending TargetA.</reportString>
     <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
   </JobDef>
   
