@@ -34,6 +34,10 @@ namespace AnimaSynthesis
             {
                 return false;
             }
+            if (pawn.skills.GetSkill(SkillDefOf.Plants).Level < 12)
+            {
+                return false;
+            }
             if (!t.IsForbidden(pawn))
             {
                 LocalTargetInfo target = t;
