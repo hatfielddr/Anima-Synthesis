@@ -104,7 +104,7 @@ namespace AnimaSynthesis
                     defaultLabel = "Debug: Ascend plant",
                     action = delegate ()
                     {
-                        this.Map.GetComponent<AscendDescend>().Swap(this, Props.higherRank);
+                        this.Map.GetComponent<AscendDescend>().Ascend(this, Props.higherRank);
                     }
                 };
                 yield return new Command_Action
@@ -112,7 +112,7 @@ namespace AnimaSynthesis
                     defaultLabel = "Debug: Descend plant",
                     action = delegate ()
                     {
-                        this.Map.GetComponent<AscendDescend>().Swap(this, Props.lowerRank);
+                        this.Map.GetComponent<AscendDescend>().Descend(this, Props.lowerRank);
                     }
                 };
                 yield return new Command_Action

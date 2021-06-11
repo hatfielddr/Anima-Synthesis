@@ -66,7 +66,7 @@
 
   <ThingDef ParentName="BaseAnimaSpud">
     <defName>AnimaSpud</defName>
-    <label>anima spud</label>
+    <label>Anima spud</label>
     <description>spud.</description>
     <uiIconScale>1.5</uiIconScale>
     <!--<tickerType>Normal</tickerType>-->
@@ -74,7 +74,7 @@
 
   <PawnKindDef ParentName="AnimaSpudBase">
     <defName>AnimaSpud</defName>
-    <label>anima spud</label>
+    <label>Anima spud</label>
     <race>AnimaSpud</race>
     <lifeStages>
       <li>

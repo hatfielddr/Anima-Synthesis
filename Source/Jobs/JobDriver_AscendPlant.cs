@@ -34,7 +34,7 @@ namespace AnimaSynthesis
             {
                 initAction = delegate ()
                 {
-                    this.AS_Plant.Map.GetComponent<AscendDescend>().Swap(this.AS_Plant, this.AS_Plant.TryGetComp<CompAscendDescend>().GetHigherRank());
+                    this.AS_Plant.Map.GetComponent<AscendDescend>().Ascend(this.AS_Plant, this.AS_Plant.TryGetComp<CompAscendDescend>().GetHigherRank());
                     pawn.skills.skills.Find((SkillRecord r) => r.def.defName == "Plants").Learn(200, false);
                 },
                 defaultCompleteMode = ToilCompleteMode.Instant
