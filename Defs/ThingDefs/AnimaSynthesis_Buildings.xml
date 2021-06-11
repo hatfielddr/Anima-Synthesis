@@ -48,12 +48,12 @@
           <li>ToolCabinet</li>
         </linkableFacilities>
       </li>
-      <li Class="AnimaSynthesis.CompProperties_StatRequirement">
-        <skill>Plants</skill>
-        <level>12</level>
-      </li>
       <li>
         <compClass>CompReportWorkSpeed</compClass>
+      </li>
+      <li Class="CompProperties_Glower">
+        <glowRadius>3.75</glowRadius>
+        <glowColor>(110,116,125,0)</glowColor>
       </li>
     </comps>
     <placeWorkers>

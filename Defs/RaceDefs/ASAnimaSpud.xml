@@ -6,8 +6,21 @@
       <MoveSpeed>6.0</MoveSpeed>
       <MarketValue>100</MarketValue>
       <ComfyTemperatureMin>-20</ComfyTemperatureMin>
+      <LeatherAmount>0</LeatherAmount>
+      <MeatAmount>0</MeatAmount>
     </statBases>
     <tools>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>1.5</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.2</chanceFactor>
+      </li>
     </tools>
     <race>
       <hasGenders>false</hasGenders>
@@ -17,12 +30,10 @@
       <baseHealthScale>0.4</baseHealthScale>
       <foodType>None</foodType>
       <leatherDef>Leather_Light</leatherDef>
-      <wildness>0.75</wildness>
-      <trainability>None</trainability>
-      <petness>0.08</petness>
-      <mateMtbHours>8</mateMtbHours>
-      <nuzzleMtbHours>36</nuzzleMtbHours>
-      <gestationPeriodDays>13</gestationPeriodDays>
+      <wildness>1.5</wildness>
+      <trainability>Simple</trainability>
+      <petness>1</petness>
+      <nuzzleMtbHours>12</nuzzleMtbHours>
       <manhunterOnTameFailChance>0</manhunterOnTameFailChance>
       <manhunterOnDamageChance>0</manhunterOnDamageChance>
       <litterSizeCurve>
@@ -47,6 +58,9 @@
       <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
       <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
     </race>
+    <butcherProducts>
+      <Plant_Potato>1</Plant_Potato>
+    </butcherProducts>
     <tradeTags>
       <li>AnimalExotic</li>
     </tradeTags>
