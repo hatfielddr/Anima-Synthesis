@@ -52,10 +52,13 @@
   <ItemGroup>
     <Compile Include="AnimaSynthesis\AS_Plant.cs" />
     <Compile Include="Comp\CompMovingGlower.cs" />
+    <Compile Include="Comp\CompProperties_StatRequirement.cs" />
+    <Compile Include="Comp\CompStatRequirement.cs" />
     <Compile Include="Jobs\JobDriver_AscendPlant.cs" />
     <Compile Include="Jobs\JobDriver_TendToAnimaPlant.cs" />
     <Compile Include="Jobs\WorkGiver_AscendPlant.cs" />
     <Compile Include="Jobs\WorkGiver_TendToAnimaPlant.cs" />
+    <Compile Include="Patches\Patch_GenConstruct.cs" />
     <Compile Include="Util\ASUtility.cs" />
     <Compile Include="AnimaSynthesis\AS_DefOf.cs" />
     <Compile Include="Comp\AscendDescend.cs" />

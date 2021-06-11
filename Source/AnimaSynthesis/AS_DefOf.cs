@@ -9,6 +9,8 @@ namespace AnimaSynthesis
     {
         [MayRequireRoyalty]
         public static ThingDef Plant_TreeAnimaSprout;
+        public static ThingDef Plant_TreeAnimaElder;
+        public static ThingDef AnimaCropCircle;
         public static JobDef AnimaSynthesis_TendToAnimaPlant;
         public static JobDef AnimaSynthesis_AscendPlant;
         public static FactionDef Animus;
