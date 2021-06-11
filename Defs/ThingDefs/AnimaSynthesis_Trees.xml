@@ -85,6 +85,10 @@
         <thought>AnimaScream</thought>
         <message>The anima tree has died and emitted a disturbing psychic scream.</message>
       </li>
+      <li Class="AnimaSynthesis.CompProperties_KillOnDestroy">
+        <thing>AnimaSpud</thing>
+        <message>As the anima tree falls, all the anima creatures drop to the ground, dead.</message>
+      </li>
       <li Class="CompProperties_PlaySoundOnDestroy">
         <sound>AnimaTreeScream</sound>
       </li>

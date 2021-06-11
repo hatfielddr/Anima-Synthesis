@@ -59,7 +59,7 @@
       <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
     </race>
     <butcherProducts>
-      <Plant_Potato>1</Plant_Potato>
+      <RawPotatoes>1</RawPotatoes>
     </butcherProducts>
     <tradeTags>
       <li>AnimalExotic</li>

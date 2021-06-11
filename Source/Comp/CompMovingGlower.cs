@@ -47,6 +47,11 @@ namespace AnimaSynthesis
             }
 		}
 
+        public override void PostDestroy(DestroyMode mode, Map previousMap)
+        {
+			this.DestroyLight();
+        }
+
         public override void PostExposeData()
         {
             base.PostExposeData();
