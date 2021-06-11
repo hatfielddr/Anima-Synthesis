@@ -6,7 +6,7 @@ namespace AnimaSynthesis
     class CompMovingGlower : ThingComp
     {
         public int nextUpdateTick = 0;
-        public Thing light;
+        public Thing light = null;
 
 		public void SpawnLight()
 		{
@@ -27,8 +27,7 @@ namespace AnimaSynthesis
 
 		public void DestroyLight()
 		{
-			bool flag = !this.light.DestroyedOrNull();
-			if (flag)
+			if (!this.light.DestroyedOrNull())
 			{
 				this.light.Destroy(DestroyMode.Vanish);
 				this.light = null;
@@ -38,14 +37,20 @@ namespace AnimaSynthesis
 		public override void CompTick()
 		{
 			base.CompTick();
-			//if (Find.TickManager.TicksGame >= this.nextUpdateTick)
-			//{
-			//	this.nextUpdateTick = Find.TickManager.TicksGame + 60;
-				if (this.parent.Spawned)
-				{
-					this.SpawnLight();
-				}
-			//}
+			if (this.parent.Spawned)
+			{
+				this.SpawnLight();
+			}
+            else
+            {
+				this.DestroyLight();
+            }
 		}
-	}
+
+        public override void PostExposeData()
+        {
+            base.PostExposeData();
+			Scribe_Values.Look<Thing>(ref this.light, "light", null, false);
+		}
+    }
 }
