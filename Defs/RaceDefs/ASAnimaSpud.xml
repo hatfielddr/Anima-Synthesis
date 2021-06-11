@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef Abstract="True" ParentName="AnimalThingBase" Name="BaseAnimaSpud">
+    <statBases>
+      <MoveSpeed>6.0</MoveSpeed>
+      <MarketValue>100</MarketValue>
+      <ComfyTemperatureMin>-20</ComfyTemperatureMin>
+    </statBases>
+    <tools>
+    </tools>
+    <race>
+      <hasGenders>false</hasGenders>
+      <body>AnimaSpud</body>
+      <baseBodySize>0.2</baseBodySize>
+      <baseHungerRate>0.23</baseHungerRate>
+      <baseHealthScale>0.4</baseHealthScale>
+      <foodType>None</foodType>
+      <leatherDef>Leather_Light</leatherDef>
+      <wildness>0.75</wildness>
+      <trainability>None</trainability>
+      <petness>0.08</petness>
+      <mateMtbHours>8</mateMtbHours>
+      <nuzzleMtbHours>36</nuzzleMtbHours>
+      <gestationPeriodDays>13</gestationPeriodDays>
+      <manhunterOnTameFailChance>0</manhunterOnTameFailChance>
+      <manhunterOnDamageChance>0</manhunterOnDamageChance>
+      <litterSizeCurve>
+        <points>
+          <li>(1.0, 0)</li>
+          <li>(1.5, 1)</li>
+          <li>(2.0, 1)</li>
+          <li>(2.5, 0)</li>
+        </points>
+      </litterSizeCurve>
+      <lifeExpectancy>200</lifeExpectancy>
+      <lifeStageAges>
+        <li>
+          <def>AnimalAdult</def>
+          <minAge>0</minAge>
+          <soundWounded>Pawn_Hare_Wounded</soundWounded>
+          <soundDeath>Pawn_Hare_Death</soundDeath>
+          <soundCall>Pawn_Hare_Call</soundCall>
+        </li>
+      </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+    </race>
+    <tradeTags>
+      <li>AnimalExotic</li>
+    </tradeTags>
+    <comps>
+      <li>
+        <compClass>AnimaSynthesis.CompMovingGlower</compClass>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <PawnKindDef Abstract="True" ParentName="AnimalKindBase" Name="AnimaSpudBase">
+    <combatPower>33</combatPower>
+    <ecoSystemWeight>0.25</ecoSystemWeight>
+  </PawnKindDef>
+
+  <!--================================================ -->
+
+  <ThingDef ParentName="BaseAnimaSpud">
+    <defName>AnimaSpud</defName>
+    <label>anima spud</label>
+    <description>spud.</description>
+    <uiIconScale>1.5</uiIconScale>
+    <!--<tickerType>Normal</tickerType>-->
+  </ThingDef>
+
+  <PawnKindDef ParentName="AnimaSpudBase">
+    <defName>AnimaSpud</defName>
+    <label>anima spud</label>
+    <race>AnimaSpud</race>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/AnimaSpud/AnimaSpud_South</texPath>
+          <drawSize>1</drawSize>
+        </bodyGraphicData>
+        <!--<dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Hare/Dessicated_Hare</texPath>
+          <drawSize>1.0</drawSize>
+        </dessicatedBodyGraphicData>-->
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+</Defs>

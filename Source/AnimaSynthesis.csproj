@@ -51,11 +51,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AnimaSynthesis\AS_Plant.cs" />
+    <Compile Include="Comp\CompMovingGlower.cs" />
     <Compile Include="Jobs\JobDriver_AscendPlant.cs" />
     <Compile Include="Jobs\JobDriver_TendToAnimaPlant.cs" />
     <Compile Include="Jobs\WorkGiver_AscendPlant.cs" />
     <Compile Include="Jobs\WorkGiver_TendToAnimaPlant.cs" />
-    <Compile Include="AnimaSynthesis\ASUtility.cs" />
+    <Compile Include="Util\ASUtility.cs" />
     <Compile Include="AnimaSynthesis\AS_DefOf.cs" />
     <Compile Include="Comp\AscendDescend.cs" />
     <Compile Include="Comp\CheckBuildings.cs" />
@@ -65,7 +66,8 @@
     <Compile Include="Comp\CompProperties_AdvancedBuildings.cs" />
     <Compile Include="Comp\CompProperties_AscendDescend.cs" />
     <Compile Include="Comp\CompProperties_GrowthCooldown.cs" />
-    <Compile Include="AnimaSynthesis\HarmonyPatcher.cs" />
+    <Compile Include="Util\HarmonyPatcher.cs" />
+    <Compile Include="Util\Util_GlowerLight.cs" />
     <Content Include="Patches\AS_StorytellerPatch.xml" />
     <Compile Include="Patches\Patch_AnimaGen.cs" />
     <Compile Include="Patches\Patch_AnimaRespawn.cs" />
