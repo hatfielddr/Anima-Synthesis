@@ -68,6 +68,12 @@
       <li>
         <compClass>AnimaSynthesis.CompMovingGlower</compClass>
       </li>
+      <li Class="CompProperties_EggLayer">
+        <eggUnfertilizedDef>AnimaSeed</eggUnfertilizedDef>
+        <eggLayIntervalDays>2</eggLayIntervalDays>
+        <eggCountRange>1</eggCountRange>
+        <eggLayFemaleOnly>false</eggLayFemaleOnly>
+      </li>
     </comps>
   </ThingDef>
 

@@ -55,7 +55,7 @@ namespace AnimaSynthesis
         public override void PostExposeData()
         {
             base.PostExposeData();
-			Scribe_Values.Look<Thing>(ref this.light, "light", null, false);
+			Scribe_Deep.Look<Thing>(ref this.light, "light", null, false);
 		}
     }
 }
