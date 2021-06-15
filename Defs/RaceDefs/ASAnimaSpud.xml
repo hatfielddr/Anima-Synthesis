@@ -71,8 +71,19 @@
       <li Class="CompProperties_EggLayer">
         <eggUnfertilizedDef>AnimaSeed</eggUnfertilizedDef>
         <eggLayIntervalDays>2</eggLayIntervalDays>
-        <eggCountRange>1</eggCountRange>
+        <eggCountRange>1~2</eggCountRange>
         <eggLayFemaleOnly>false</eggLayFemaleOnly>
+      </li>
+      <li Class="AnimalBehaviours.CompProperties_ThoughtEffecter">
+        <radius>15</radius>
+        <tickInterval>1500</tickInterval>
+        <thoughtDef>SawSpud</thoughtDef>
+        <needsToBeTamed>true</needsToBeTamed>
+      </li>
+      <li Class="AnimalBehaviours.CompProperties_LightSustenance">
+      </li>
+      <li>
+        <compClass>AnimaSynthesis.EggRateOnHappiness</compClass>
       </li>
     </comps>
   </ThingDef>

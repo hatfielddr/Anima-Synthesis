@@ -10,6 +10,7 @@ namespace AnimaSynthesis
         public bool techOffset = false;
         public float meditationFactor;
         public int tickBeforeTend = 120000;
+        public float growthRate = 0f;
 
         public bool needTend
         {
@@ -35,10 +36,20 @@ namespace AnimaSynthesis
             }
         }
 
+        public bool IsHappy()
+        {
+            if (this.LifeStage == PlantLifeStage.Mature || growthRate > 100)
+            {
+                return true;
+            }
+            return false;
+        }
+
         public override void TickLong()
         {
             base.TickLong();
             this.tickBeforeTend -= 2000;
+            growthRate = GrowthRate;
         }
 
         public override void ExposeData()

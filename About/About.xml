@@ -17,7 +17,19 @@
       <displayName>Humanoid Alien Races</displayName>
       <downloadUrl>https://github.com/erdelf/AlienRaces/wiki</downloadUrl>
     </li>
+    <li>
+      <packageId>OskarPotocki.VanillaFactionsExpanded.Core</packageId>
+      <displayName>Vanilla Expanded Framework</displayName>
+      <steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=1854607105</steamWorkshopUrl>
+    </li>
   </modDependencies>
 	<description>Tribal Psychic Redux</description>
 	<url>https://steamcommunity.com/profiles/76561198127933002/myworkshopfiles/</url>
+
+  <loadAfter>
+    <li>Ludeon.RimWorld</li>
+    <li>Ludeon.RimWorld.Royalty</li>
+    <li>brrainz.harmony</li>
+    <li>OskarPotocki.VanillaFactionsExpanded.Core</li>
+  </loadAfter>
 </ModMetaData>

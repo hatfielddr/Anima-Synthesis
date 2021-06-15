@@ -54,6 +54,7 @@
     <Compile Include="Comp\CompKillOnDestroy.cs" />
     <Compile Include="Comp\CompMovingGlower.cs" />
     <Compile Include="Comp\CompProperties_KillOnDestroy.cs" />
+    <Compile Include="Comp\EggRateOnHappiness.cs" />
     <Compile Include="Incident\IncidentWorker_ASSelfTame.cs" />
     <Compile Include="Jobs\JobDriver_AscendPlant.cs" />
     <Compile Include="Jobs\JobDriver_TendToAnimaPlant.cs" />
