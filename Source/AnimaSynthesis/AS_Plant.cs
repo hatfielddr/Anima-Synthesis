@@ -1,7 +1,9 @@
 ﻿using RimWorld;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using Verse;
+using Verse.AI;
 
 namespace AnimaSynthesis
 {
@@ -143,6 +145,32 @@ namespace AnimaSynthesis
                     }
                 };
             }
+            yield break;
+        }
+
+        public override IEnumerable<FloatMenuOption> GetFloatMenuOptions(Pawn pawn)
+        {
+            foreach (FloatMenuOption floatMenuOption2 in base.GetFloatMenuOptions(pawn))
+            {
+                yield return floatMenuOption2;
+            }
+            if (!pawn.CanReach(this, PathEndMode.InteractionCell, Danger.Deadly, false, TraverseMode.ByPawn))
+            {
+                FloatMenuOption floatMenuOption3 = new FloatMenuOption("CannotUseNoPath".Translate(), null, MenuOptionPriority.Default, null, null, 0f, null, null);
+                yield return floatMenuOption3;
+            }
+            else
+            {
+                JobDef jobDef = AS_DefOf.AnimaSynthesis_AnimaSynthesis;
+                string label = "AnimaSynthesis".Translate();
+                Action action = delegate ()
+                {
+                    Job job = JobMaker.MakeJob(jobDef, this);
+                    pawn.jobs.TryTakeOrderedJob(job, JobTag.Misc);
+                };
+                yield return FloatMenuUtility.DecoratePrioritizedTask(new FloatMenuOption(label, action, MenuOptionPriority.Default, null, null, 0f, null, null), pawn, this, "ReservedBy");
+            }
+            yield break;
             yield break;
         }
     }

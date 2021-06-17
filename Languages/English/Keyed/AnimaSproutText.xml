@@ -4,4 +4,5 @@
   <MeditationNeed>The {0} needs to be meditated at to continue progression.</MeditationNeed>
   <NeedsTending>The {0} needs to be tended to.</NeedsTending>
   <NeedsTendIn>The {0} needs to be tended in {1}.</NeedsTendIn>
+  <AnimaSynthesis>Synthesize colonist</AnimaSynthesis>
 </LanguageData>

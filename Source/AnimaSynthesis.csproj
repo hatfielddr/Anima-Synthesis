@@ -54,10 +54,13 @@
     <Compile Include="Comp\CompKillOnDestroy.cs" />
     <Compile Include="Comp\CompMovingGlower.cs" />
     <Compile Include="Comp\CompProperties_KillOnDestroy.cs" />
+    <Compile Include="Comp\CompProperties_SpawnPawnType.cs" />
+    <Compile Include="Comp\CompSpawnPawnType.cs" />
     <Compile Include="Comp\EggRateOnHappiness.cs" />
     <Compile Include="Incident\IncidentWorker_ASSelfTame.cs" />
     <Compile Include="Jobs\JobDriver_AscendPlant.cs" />
     <Compile Include="Jobs\JobDriver_TendToAnimaPlant.cs" />
+    <Compile Include="Jobs\JobDriver_AnimaSynthesis.cs" />
     <Compile Include="Jobs\WorkGiver_AscendPlant.cs" />
     <Compile Include="Jobs\WorkGiver_TendToAnimaPlant.cs" />
     <Compile Include="Patches\Patch_GenConstruct.cs" />

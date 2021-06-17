@@ -14,5 +14,12 @@
     <reportString>ascending TargetA.</reportString>
     <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
   </JobDef>
+
+  <JobDef>
+    <defName>AnimaSynthesis_AnimaSynthesis</defName>
+    <driverClass>AnimaSynthesis.JobDriver_AnimaSynthesis</driverClass>
+    <reportString>synthesizing TargetA.</reportString>
+    <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+  </JobDef>
   
 </Defs>

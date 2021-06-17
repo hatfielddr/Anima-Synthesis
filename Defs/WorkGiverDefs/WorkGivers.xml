@@ -26,5 +26,22 @@
       <li>Manipulation</li>
     </requiredCapacities>
   </WorkGiverDef>
+
+  <WorkGiverDef>
+    <defName>ASDoBillsAnimaCropCirlce</defName>
+    <label>synthesize creatures</label>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Growing</workType>
+    <priorityInType>50</priorityInType>
+    <fixedBillGiverDefs>
+      <li>AnimaCropCircle</li>
+    </fixedBillGiverDefs>
+    <verb>synthesizing creatures</verb>
+    <gerund>synthesizing creatures at</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <prioritizeSustains>true</prioritizeSustains>
+  </WorkGiverDef>
   
 </Defs> 
