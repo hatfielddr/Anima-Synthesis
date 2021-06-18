@@ -5,16 +5,7 @@
     <defName>Synthesis</defName>
     <label>Synthesis</label>
 
-    <description>The Rockmen, as they have been nicknamed by humans, are called so because of their unique skin which according to scientific experiments can be nearly as hard and rugged as solid rock. Additionally, the Rockmen are extremely well conditioned and physically strong to compensate for their thick rock-like skin, giving them an astounding resilience. As a result of their physical attributes, the Rockmen have evolved throughout their race's existence into a warrior race which values personal strength and martial prowess over nearly everything else.
-      While the Rockmen are generally not an adventurous race, and can only be consistently located within their own territories' borders, the Rockmen are liable to open fire on any ship they encounter that they aren't familiar with. Still, there are always exceptions to the rule, and having Rockmen crew can be very beneficial. Also, from random occurrences, some Rockmen seem to be quite religious.
-
-      + 150% Health scale
-      + 110% mining speed
-      + Fireproof, comfy temp over 9000 (frost may bite though)
-      + Natural armor
-      - 85% speed
-      - 150% Hunger rate
-      - 105% psychic sensitivity to depict religious inclination</description>
+    <description>The Syntheses, as they have been nicknamed by tribals, are former humans who have been transformed after communing with an anima plant.</description>
 
     <statBases>
       <PsychicSensitivity>1.05</PsychicSensitivity>
@@ -26,7 +17,7 @@
       <Mass>120</Mass>
       <MoveSpeed>3.92</MoveSpeed>
 
-      <Flammability>0</Flammability>
+      <Flammability>2</Flammability>
       <!-- base 1.5 -->
       <MeatAmount>50</MeatAmount>
       <LeatherAmount>8</LeatherAmount>
@@ -271,7 +262,7 @@
       <baseBodySize>1.5</baseBodySize>
       <baseHealthScale>1.5</baseHealthScale>
       <baseHungerRate>1.5</baseHungerRate>
-      <foodType>OmnivoreHuman</foodType>
+      <foodType>None</foodType>
       <gestationPeriodDays>100</gestationPeriodDays>
 
       <litterSizeCurve>
@@ -341,6 +332,11 @@
     <butcherProducts>
       <ChunkSandstone>1</ChunkSandstone>
     </butcherProducts>
+
+    <comps>
+      <li Class="AnimalBehaviours.CompProperties_LightSustenance">
+      </li>
+    </comps>
 
   </AlienRace.ThingDef_AlienRace>
 </Defs>
