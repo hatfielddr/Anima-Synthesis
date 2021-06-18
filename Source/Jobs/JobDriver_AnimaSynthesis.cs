@@ -28,8 +28,11 @@ namespace AnimaSynthesis
 				AS_Plant plant = (AS_Plant)actor.CurJob.targetA.Thing;
 				Action action = delegate ()
 				{
-					Pawn pawn = ASUtility.GenerateASPawn_Transform(AS_DefOf.SynthesisColonist, actor, plant.Tile);
-                    _ = GenSpawn.Spawn(pawn, actor.Position, actor.Map, Rot4.South) as Pawn;
+                    actor.equipment.DropAllEquipment(actor.Position);
+                    actor.apparel.DropAll(actor.Position);
+                    actor.inventory.DropAllNearPawn(actor.Position);
+					Pawn pawn = ASUtility.GenerateASPawn_Transform(AS_DefOf.SynthesisColonist, actor, actor.Tile);
+                    _ = GenSpawn.Spawn(pawn, actor.Position, Find.CurrentMap, actor.Rotation);
                     actor.DeSpawn(DestroyMode.Vanish);
 				};
 				action();
