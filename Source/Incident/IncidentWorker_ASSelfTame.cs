@@ -44,7 +44,7 @@ namespace AnimaSynthesis
 				}
 				if (pawn.guest != null)
 				{
-					pawn.guest.SetGuestStatus(null, false);
+					pawn.guest.SetGuestStatus(null, GuestStatus.Guest);
 				}
 				string value = pawn.LabelIndefinite();
 				bool flag = pawn.Name != null;

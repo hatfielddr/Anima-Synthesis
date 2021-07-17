@@ -16,10 +16,7 @@ namespace AnimaSynthesis
 				previousThing.DeSpawn();
 				AS_Plant plant = (AS_Plant)GenSpawn.Spawn(def, pos, this.map);
 				plant.Growth = 0.001f;
-				MoteMaker.ThrowDustPuffThick(pos.ToVector3(), map, 4, new UnityEngine.Color(1f, 1f, 1f, 20.5f));
-				MoteMaker.ThrowDustPuffThick(pos.ToVector3(), map, 4, new UnityEngine.Color(1f, 1f, 1f, 20.5f));
-				MoteMaker.ThrowDustPuffThick(pos.ToVector3(), map, 4, new UnityEngine.Color(1f, 1f, 1f, 20.5f));
-				MoteMaker.ThrowDustPuffThick(pos.ToVector3(), map, 4, new UnityEngine.Color(1f, 1f, 1f, 20.5f));
+				// TODO - Add a new visual effect for 1.3
 				SoundDefOf.MechClusterDefeated.PlayOneShotOnCamera();
 			}
             else
@@ -36,10 +33,7 @@ namespace AnimaSynthesis
 				previousThing.DeSpawn();
 				AS_Plant plant = (AS_Plant)GenSpawn.Spawn(def, pos, this.map);
 				plant.Growth = 0.001f;
-				MoteMaker.ThrowDustPuffThick(pos.ToVector3(), map, 4, new UnityEngine.Color(1f, 1f, 1f, 20.5f));
-				MoteMaker.ThrowDustPuffThick(pos.ToVector3(), map, 4, new UnityEngine.Color(1f, 1f, 1f, 20.5f));
-				MoteMaker.ThrowDustPuffThick(pos.ToVector3(), map, 4, new UnityEngine.Color(1f, 1f, 1f, 20.5f));
-				MoteMaker.ThrowDustPuffThick(pos.ToVector3(), map, 4, new UnityEngine.Color(1f, 1f, 1f, 20.5f));
+				// TODO - Same as prev
 			}
 			else
 			{

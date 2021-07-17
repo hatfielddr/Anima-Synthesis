@@ -154,7 +154,7 @@ namespace AnimaSynthesis
             {
                 yield return floatMenuOption2;
             }
-            if (!pawn.CanReach(this, PathEndMode.InteractionCell, Danger.Deadly, false, TraverseMode.ByPawn))
+            if (!pawn.CanReach(this, PathEndMode.InteractionCell, Danger.Deadly, false, false, TraverseMode.ByPawn))
             {
                 FloatMenuOption floatMenuOption3 = new FloatMenuOption("CannotUseNoPath".Translate(), null, MenuOptionPriority.Default, null, null, 0f, null, null);
                 yield return floatMenuOption3;

@@ -20,7 +20,7 @@ namespace AnimaSynthesis
 
         public static Pawn GenerateASPawn_New(PawnKindDef pawnKind, int tile)
         {
-			var pawn = PawnGenerator.GeneratePawn(new PawnGenerationRequest(pawnKind, Faction.OfPlayer, PawnGenerationContext.NonPlayer, tile, false, false, false, false, false, true, 0f, false, true, false, false, false, false, false, false, 0f, null, 0f, null, null, null, null, new float?(0.2f), 0, null, Gender.Male, null, null, null, null));
+			var pawn = PawnGenerator.GeneratePawn(new PawnGenerationRequest());
 			return pawn;
 		}
 
@@ -69,10 +69,10 @@ namespace AnimaSynthesis
 					foreach (Thing thing in map.listerThings.AllThings)
 					{
 						CompBladelinkWeapon compBladelinkWeapon = thing.TryGetComp<CompBladelinkWeapon>();
-						bool flag9 = compBladelinkWeapon != null && compBladelinkWeapon.bondedPawn == original;
+						bool flag9 = compBladelinkWeapon != null && compBladelinkWeapon.CodedPawn == original;
 						if (flag9)
 						{
-							compBladelinkWeapon.bondedPawn = transformed;
+							compBladelinkWeapon.CodeFor(transformed);
 						}
 					}
                 }
