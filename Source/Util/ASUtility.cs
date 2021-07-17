@@ -51,7 +51,7 @@ namespace AnimaSynthesis
 			transformed.story.bodyType = BodyTypeDefOf.Male;
 			transformed.gender = Gender.Male;
 			// ==========
-			//TransferRelations(original, transformed);
+			TransferRelations(original, transformed);
 
 			transformed.skills = original.skills;
 			transformed.workSettings = original.workSettings;

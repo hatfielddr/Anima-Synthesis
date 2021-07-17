@@ -16,7 +16,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>none</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>..\v1.3\Assemblies\</OutputPath>
+    <OutputPath>..\1.3\Assemblies\</OutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
@@ -40,13 +40,9 @@
       <Private>False</Private>
     </Reference>
     <None Include="..\About\About.xml" />
-    <None Include="..\Defs\FactionDefs\AS_Factions.xml" />
-    <None Include="..\Defs\IncidentDefs\AS_Incidents_World_Quests.xml" />
-    <None Include="..\Defs\JobDefs\Jobs_Misc.xml" />
-    <None Include="..\Defs\PawnKindsDefs\PawnKinds_Animus.xml" />
-    <None Include="..\Defs\QuestScriptDefs\AS_Script_Intro_Wimp.xml" />
-    <None Include="..\Defs\ThingDefs\AnimaSynthesis_Trees.xml" />
-    <None Include="..\Defs\WorkGiverDefs\WorkGivers.xml" />
+    <!--None Include="..\Defs\FactionDefs\AS_Factions.xml" /-->
+    <!--None Include="..\Defs\PawnKindsDefs\PawnKinds_Animus.xml" /-->
+    <!--None Include="..\Defs\QuestScriptDefs\AS_Script_Intro_Wimp.xml" /-->
     <None Include="..\Patches\**" />
   </ItemGroup>
   <ItemGroup>

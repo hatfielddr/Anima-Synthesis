@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <JobDef>
+    <defName>AnimaSynthesis_TendToAnimaPlant</defName>
+    <driverClass>AnimaSynthesis.JobDriver_TendToAnimaPlant</driverClass>
+    <reportString>tending to TargetA.</reportString>
+    <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+  </JobDef>
+
+  <JobDef>
+    <defName>AnimaSynthesis_AscendPlant</defName>
+    <driverClass>AnimaSynthesis.JobDriver_AscendPlant</driverClass>
+    <reportString>ascending TargetA.</reportString>
+    <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+  </JobDef>
+
+  <JobDef>
+    <defName>AnimaSynthesis_AnimaSynthesis</defName>
+    <driverClass>AnimaSynthesis.JobDriver_AnimaSynthesis</driverClass>
+    <reportString>synthesizing TargetA.</reportString>
+    <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+  </JobDef>
+  
+</Defs>

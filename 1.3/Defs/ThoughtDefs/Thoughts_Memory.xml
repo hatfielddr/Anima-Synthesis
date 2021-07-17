@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThoughtDef>	
+		<defName>SawSpud</defName>
+		<durationDays>0.5</durationDays>
+		<stages>
+			<li>
+				<label>saw a spud</label>
+				<description>I saw a spuddy buddy!</description>
+				<baseMoodEffect>3</baseMoodEffect>
+			</li>
+		</stages>			
+	</ThoughtDef>
+</Defs>

@@ -17,6 +17,7 @@ namespace AnimaSynthesis
 				AS_Plant plant = (AS_Plant)GenSpawn.Spawn(def, pos, this.map);
 				plant.Growth = 0.001f;
 				// TODO - Add a new visual effect for 1.3
+				FleckMaker.ThrowDustPuffThick(pos.ToVector3(), map, 4, UnityEngine.Color.white);
 				SoundDefOf.MechClusterDefeated.PlayOneShotOnCamera();
 			}
             else

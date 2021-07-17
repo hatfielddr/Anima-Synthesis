@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <WorkGiverDef>
+    <defName>AnimaSynthesis_TendToTheAnimaPlant</defName>
+    <label>tend to the anima plant</label>
+    <giverClass>AnimaSynthesis.WorkGiver_TendToAnimaPlant</giverClass>
+    <workType>Growing</workType>
+    <verb>tend anima plant</verb>
+    <gerund>tending to</gerund>
+    <priorityInType>20</priorityInType>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+  </WorkGiverDef>
+
+  <WorkGiverDef>
+    <defName>AnimaSynthesis_AscendPlant</defName>
+    <label>ascend the anima plant</label>
+    <giverClass>AnimaSynthesis.WorkGiver_AscendPlant</giverClass>
+    <workType>Growing</workType>
+    <verb>ascend anima plant</verb>
+    <gerund>ascending</gerund>
+    <priorityInType>20</priorityInType>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+  </WorkGiverDef>
+
+  <WorkGiverDef>
+    <defName>ASDoBillsAnimaCropCirlce</defName>
+    <label>synthesize creatures</label>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Growing</workType>
+    <priorityInType>50</priorityInType>
+    <fixedBillGiverDefs>
+      <li>AnimaCropCircle</li>
+    </fixedBillGiverDefs>
+    <verb>synthesizing creatures</verb>
+    <gerund>synthesizing creatures at</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <prioritizeSustains>true</prioritizeSustains>
+  </WorkGiverDef>
+  
+</Defs> 

@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="ResourceBase">
+    <defName>AnimaSeed</defName>
+    <label>anima seed</label>
+    <description>A magical seed</description>
+    <graphicData>
+      <texPath>Things/Items/AnimaSeed</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <soundInteract>Wood_Drop</soundInteract>
+    <soundDrop>Wood_Drop</soundDrop>
+    <stackLimit>75</stackLimit>
+    <useHitPoints>true</useHitPoints>
+    <statBases>
+      <MarketValue>250</MarketValue>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Mass>.1</Mass>
+      <Flammability>1.2</Flammability>
+    </statBases>
+    <thingCategories>
+      <li>Items</li>
+    </thingCategories>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <tradeability>Sellable</tradeability>
+    <techLevel>Neolithic</techLevel>
+    <tradeTags>
+      <li>ExoticMisc</li>
+    </tradeTags>
+  </ThingDef>
+</Defs>

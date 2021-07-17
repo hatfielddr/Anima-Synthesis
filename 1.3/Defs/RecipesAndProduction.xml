@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef Name="ASProductionBase" Abstract="True">
+    <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+    <selectable>true</selectable>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <repairEffect>Repair</repairEffect>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <filthLeaving>Filth_RubbleRock</filthLeaving>
+    <description>Synthesizes an anima creature</description>
+    <graphicData>
+      <texPath>Things/Building/DummyTexture</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <thingClass>ThingWithComps</thingClass>
+    <category>Filth</category>
+    <statBases>
+      <WorkToMake>600</WorkToMake>
+      <MaxHitPoints>200</MaxHitPoints>
+      <Flammability>0.2</Flammability>
+    </statBases>
+    <altitudeLayer>Filth</altitudeLayer>
+    <useHitPoints>True</useHitPoints>
+    <size>(1,1)</size>
+    <passability>Standable</passability>
+    <pathCost>200</pathCost>
+    <hasInteractionCell>false</hasInteractionCell>
+    <surfaceType>Item</surfaceType>
+    <tickerType>Normal</tickerType>
+  </ThingDef>
+
+  <RecipeDef Name="ASRecipeBase" Abstract="True">
+    <jobString>Synthesizing anima creature</jobString>
+    <allowMixingIngredients>false</allowMixingIngredients>
+    <skillRequirements>
+      <Plants>10</Plants>
+    </skillRequirements>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+    <workSkill>Plants</workSkill>
+    <effectWorking>Sow</effectWorking>
+    <soundWorking>Interact_Sow</soundWorking>
+    <recipeUsers>
+      <li>AnimaCropCircle</li>
+    </recipeUsers>
+    <researchPrerequisite></researchPrerequisite>
+  </RecipeDef>
+
+  <RecipeDef Name="ASAnimaSpudRecipeBase" Abstract="True" ParentName="ASRecipeBase">
+    <description>Synthsize Anima Spud</description>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>AnimaSeed</li>
+          </thingDefs>
+        </filter>
+        <count>12</count>
+      </li>
+    </ingredients>
+    <workAmount>1200</workAmount>
+  </RecipeDef>
+
+  <ThingDef ParentName="ASProductionBase">
+    <defName>ASAnimaSpudSpawner</defName>
+    <label>Anima Spud</label>
+    <comps>
+      <li Class="AnimaSynthesis.CompProperties_SpawnPawnType">
+        <compClass>AnimaSynthesis.CompSpawnPawnType</compClass>
+        <pawnKind>AnimaSpud</pawnKind>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <RecipeDef ParentName="ASAnimaSpudRecipeBase">
+    <defName>ASAnimaSpud</defName>
+    <label>Synthesize Anima Spud</label>
+    <description>Anima Spud</description>
+    <products>
+      <ASAnimaSpudSpawner>1</ASAnimaSpudSpawner>
+    </products>
+  </RecipeDef>
+</Defs>

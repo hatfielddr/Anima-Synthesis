@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef>
+    <thingClass>ThingWithComps</thingClass>
+    <defName>GlowerLight</defName>
+    <label>glower light</label>
+    <description>glower light</description>
+    <graphicData>
+      <texPath>Things/Building/DummyTexture</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <selectable>false</selectable>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>3.75</glowRadius>
+        <glowColor>(110,116,125,0)</glowColor>
+      </li>
+    </comps>
+  </ThingDef>
+
+</Defs>

@@ -14,8 +14,8 @@ namespace AnimaSynthesis
         public static JobDef AnimaSynthesis_TendToAnimaPlant;
         public static JobDef AnimaSynthesis_AscendPlant;
         public static JobDef AnimaSynthesis_AnimaSynthesis;
-        public static FactionDef Animus;
-        public static QuestScriptDef AS_Intro_Wimp;
+        //public static FactionDef Animus;
+        //public static QuestScriptDef AS_Intro_Wimp;
         public static PawnKindDef SynthesisColonist;
     }
 }
