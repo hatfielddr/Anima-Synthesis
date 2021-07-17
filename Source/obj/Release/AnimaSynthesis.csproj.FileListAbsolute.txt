@@ -3,3 +3,4 @@ D:\SteamLibrary2.0\steamapps\common\RimWorld\Mods\Anima Synthesis\Source\obj\Rel
 D:\SteamLibrary2.0\steamapps\common\RimWorld\Mods\Anima Synthesis\Source\obj\Release\AnimaSynthesis.csproj.CoreCompileInputs.cache
 D:\SteamLibrary2.0\steamapps\common\RimWorld\Mods\Anima Synthesis\Source\obj\Release\AnimaSynthesis.dll
 D:\SteamLibrary2.0\steamapps\common\RimWorld\Mods\Anima Synthesis\Source\obj\Release\AnimaSynthesis.csproj.CopyComplete
+D:\SteamLibrary2.0\steamapps\common\RimWorld\Mods\Anima Synthesis\v1.2\Assemblies\AnimaSynthesis.dll
