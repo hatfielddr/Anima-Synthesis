@@ -28,7 +28,7 @@
     </weaponTags>
   </PawnKindDef>
 
-  <!-- ============================ Rockman Civilian Base ========================== -->
+  <!-- ============================ Synthesis Civilian Base ========================== -->
 
   <PawnKindDef Name="SynthesisCivBase" ParentName="SynthesisBase" Abstract="True">
     <combatPower>25</combatPower>

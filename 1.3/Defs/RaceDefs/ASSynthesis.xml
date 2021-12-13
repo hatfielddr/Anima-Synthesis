@@ -1,10 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-  <AlienRace.ThingDef_AlienRace ParentName="BasePawn">
-    <defName>Synthesis</defName>
-    <label>Synthesis</label>
-
+  <AlienRace.ThingDef_AlienRace ParentName="BasePawn" Name="ASBase" Abstract="True">
     <description>The Syntheses, as they have been nicknamed by tribals, are former humans who have been transformed after communing with an anima plant.</description>
 
     <statBases>
@@ -115,10 +112,12 @@
         <alienPartGenerator>
           <customDrawSize>(1.25, 1.2)</customDrawSize>
           <customPortraitDrawSize>(1, 1)</customPortraitDrawSize>
+          <!-- TODO - body types-->
           <alienbodytypes>
             <li>Male</li>
           </alienbodytypes>
 
+          <!-- TODO - head types-->
           <aliencrowntypes>
             <li>Average_Normal</li>
           </aliencrowntypes>
@@ -128,6 +127,7 @@
           <colorChannels>
             <li>
               <name>skin</name>
+              <!-- TODO - change the color generator options-->
               <first Class="ColorGenerator_Options">
                 <options>
 
@@ -212,6 +212,7 @@
         <!--race has their own beds-->
         <!-- 	   <validBeds><li>Dummy_Bed</li></validBeds> -->
 
+        <!-- TODO - add in more genders and body styles-->
         <maleGenderProbability>1</maleGenderProbability>
 
         <forcedRaceTraitEntries>
@@ -254,7 +255,7 @@
       <bloodDef>Filth_RubbleRock</bloodDef>
 
       <useMeatFrom>Human</useMeatFrom>
-      <leatherDef>Leather_Rockman</leatherDef>
+      <leatherDef>Leather_Synthesis</leatherDef>
 
       <nameCategory>HumanStandard</nameCategory>
 
@@ -330,6 +331,7 @@
     </race>
 
     <butcherProducts>
+      <!-- TODO - change butcher product to something more appropriate-->
       <ChunkSandstone>1</ChunkSandstone>
     </butcherProducts>
 
@@ -338,5 +340,16 @@
       </li>
     </comps>
 
+  </AlienRace.ThingDef_AlienRace>
+
+  <AlienRace.ThingDef_AlienRace ParentName="ASBase">
+    <defName>Synthesis</defName>
+    <label>synthesiscolonist</label>
+  </AlienRace.ThingDef_AlienRace>
+
+
+  <AlienRace.ThingDef_AlienRace ParentName="ASBase">
+    <defName>LuminousSynthesis</defName>
+    <label>luminoussynthesiscolonist</label>
   </AlienRace.ThingDef_AlienRace>
 </Defs>

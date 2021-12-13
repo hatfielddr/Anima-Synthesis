@@ -32,7 +32,7 @@ namespace AnimaSynthesis
                     actor.apparel.DropAll(actor.Position);
                     actor.inventory.DropAllNearPawn(actor.Position);
 					Pawn pawn = ASUtility.GenerateASPawn_Transform(AS_DefOf.SynthesisColonist, actor, actor.Tile);
-                    _ = GenSpawn.Spawn(pawn, actor.Position, Find.CurrentMap, actor.Rotation);
+                    Pawn output = GenSpawn.Spawn(pawn, actor.Position, Find.CurrentMap, actor.Rotation) as Pawn;
                     actor.DeSpawn(DestroyMode.Vanish);
 				};
 				action();
