@@ -11,3 +11,8 @@ D:\git repos\Anima-Synthesis\Source\obj\Release\AnimaSynthesis.csproj.CoreCompil
 D:\git repos\Anima-Synthesis\Source\obj\Release\AnimaSynthesis.dll
 D:\git repos\Anima-Synthesis\1.3\Assemblies\AnimaSynthesis.dll
 D:\git repos\Anima-Synthesis\Source\obj\Release\AnimaSynthesis.csproj.CopyComplete
+D:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Anima-Synthesis\Source\obj\Release\AnimaSynthesis.csproj.AssemblyReference.cache
+D:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Anima-Synthesis\Source\obj\Release\AnimaSynthesis.csproj.CoreCompileInputs.cache
+D:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Anima-Synthesis\Source\obj\Release\AnimaSynthesis.dll
+D:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Anima-Synthesis\1.3\Assemblies\AnimaSynthesis.dll
+D:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Anima-Synthesis\Source\obj\Release\AnimaSynthesis.csproj.CopyComplete

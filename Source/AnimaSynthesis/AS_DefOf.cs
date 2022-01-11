@@ -15,6 +15,5 @@ namespace AnimaSynthesis
         public static JobDef AnimaSynthesis_AscendPlant;
         public static JobDef AnimaSynthesis_AnimaSynthesis;
         public static PawnKindDef SynthesisColonist;
-        public static QuestScriptDef Colonist_Synthesize;
     }
 }
