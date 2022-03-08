@@ -12,7 +12,7 @@ namespace AnimaSynthesis
 		public void Notify_BuildingChange()
 		{
             		dirty = true;
-        		}
+		}
 
 		public List<Thing> RegenCache(List<Thing> list, IntVec3 cell, float radius)
         	{
