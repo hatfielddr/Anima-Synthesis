@@ -11,18 +11,18 @@ namespace AnimaSynthesis
 
 		public void Notify_BuildingChange()
 		{
-            dirty = true;
-        }
+            		dirty = true;
+        		}
 
 		public List<Thing> RegenCache(List<Thing> list, IntVec3 cell, float radius)
-        {
+        	{
 			if (dirty)
-            {
+            		{
 				dirty = false;
 				return GetForCell(cell, radius);
-            }
+            		}
 			return list;
-        }
+        	}
 
 		private List<Thing> GetForCell(IntVec3 cell, float radius)
 		{
